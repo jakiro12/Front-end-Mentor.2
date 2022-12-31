@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsla(229, 24%, 87%, 0.91);
+}
+.container{
+    width: 70%;
+    height: 77%;
+    display: flex;
+    padding:1% ;
+    background-color: white;
+    border-radius: 10px;
+}
+.card_options{
+    width: 25%;
+    height: 100%;
+    display: grid;
+    align-content: flex-start;
+    place-items: center;
+    border-radius: 15px;
+    position: relative;
+}
+.behind{
+    position: absolute;
+    height: 100%;
+}
+.behind2{
+    display: none;
+}
+.option_selected{
+    height: 100%;
+    width: calc(100% - 38%);
+    padding-top: 3.4%;
+    margin-inline:auto ;
+}
+.option_selected > div{
+    width: 80%;
+    height: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 0.9fr;
+}
+.card_options .selected{
+    width: 64%;
+    height: 45px;
+    margin-top: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+}
+.describe{
+    height: 100%;
+    width: 70%;
+}
+.step{
+    font-size: 14px;
+    color: hsla(229, 24%, 87%, 0.91);
+
+}
+.step_type{
+    font-size: 16px;
+    color: white;
+}
+.icon_cards{
+    width: 50px;
+    height: 50px;
+}
+.ball{
+    display: block;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: grid;
+    place-items: center;
+    background: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+}
+.ball:hover{
+    background: hsl(228, 100%, 84%);
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s;
+}
+.title{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: space-between;
+}
+.title h1  {
+    color: hsl(213, 96%, 18%);
+}
+.title p{
+    color:hsl(231, 11%, 63%);
+}
+.content_to_show{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+   
+}
+.chekedBoxA{
+    border: 2px solid hsl(231, 11%, 63%);
+    height: 90%;
+        width: 31%;
+        display: grid;
+        background-color: hsla(229, 24%, 87%, 0.5);
+        align-content: space-around;
+        padding-left:2% ;
+        text-decoration: none;
+        border-radius: 10px;
+}
+.chekedBoxA:hover{
+    border: 2px solid  hsl(213, 96%, 18%);
+}
+
+
+.buttons_display{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+.next{
+    height: 40px;
+    width: 100px;
+    color:white ;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+     border-radius:5px;
+     cursor: pointer;
+    background-color: hsl(243, 100%, 62%);
+}
+.input_content{
+    display: grid;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.input_content > input{
+    height: 35px;
+    border: 2px solid hsl(229, 24%, 87%);
+    border-radius: 5px;
+    transition: all 1s;
+   
+}
+.input_content > label{
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+}
+
+input:focus { 
+    outline:none;
+    border-color:blue;
+    border-radius: 5px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    text-indent: 10px;
+    transition: all 1s;
+    
+   }
+.nameuser::after {
+    position: absolute;
+    content: 'This field is required';
+    width: 20%;
+    height: 10%;
+    top: 22%;
+    font-size:x-small;
+    right: 0;
+    color: red;
+}
+.go_back{
+    visibility: hidden;
+    height: 40px;
+    width: 100px;
+    color:hsl(243, 100%, 62%) ;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+     border-radius:5px;
+     cursor: pointer;
+  
+
+}
+.option_box{
+    width: 100%;
+    height: 80px;
+    border: 2px solid hsl(243, 100%, 62%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.option_input{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.info_input{
+    width: 80%;
+    height: auto;
+    display: grid;
+    align-content: center;
+}
+.info_input h3{
+    color: hsl(213, 96%, 18%);
+
+}
+
+.info_input p{
+    width: auto;
+    font-size: 16px;
+    color:hsl(231, 11%, 63%);
+}
+.value{
+    color: hsl(243, 100%, 62%);
+    font-weight: 600;
+}
+.paid{
+    width: 80%;
+    height: 40%;
+    margin-inline:auto ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.paid p{
+    color:  hsl(213, 96%, 18%);
+}
+.paid a:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.divisor_line{
+    height: 2px;
+    background-color: gray;
+    width: 80%;
+    margin-inline:auto ;
+
+}
+.info_paid{
+    height: 80%;
+    width: 40%;
+
+}
+.final_paid{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.paid_values{
+    width: 80%;
+    height: 40%;
+    margin-inline:auto ;
+    display: grid;
+}
+.paid_values div{
+    height: 80%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.others_paids{
+    color: gray;
+}
+.not_calculated{
+    color:  hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+.thanks{
+    place-items: center;
+    align-content: center;
+}
+.thanks img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 3%;
+}
+.thanks h1{
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 3%;
+}
+.thanks p{
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+}
+.setDisplay{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+.timebtn{
+    width:20px;
+    border-radius:50%;
+    height:20px;
+    cursor:pointer;
+}
+@media  (max-width:400px) {
+    body{
+        background-color: white;
+        align-items: flex-start;
+    }
+    .container{
+        width: 100%;
+        height: 87%;
+        display: grid;
+        padding:0 ;
+        background-color: hsla(229, 24%, 87%, 0.91);
+        margin-inline: auto;
+    }
+    .describe{
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    .card_options{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        border-radius: none;
+        overflow: hidden;
+    }
+    .behind{
+        display: none;
+        visibility: hidden;
+    }
+    .behind2{
+        display: block;
+        position: absolute;
+        height: auto;
+        width: 100%;
+        bottom: 0;
+
+    }
+    .option_selected{
+        width: 84%;
+        height: 70%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 5%;
+        margin: auto;
+        border-radius: 10px;
+        background-color: white;
+    }
+    .card_options .selected{
+        width: 15%;
+        height: 45px;
+        margin-top: 5%;
+        display: grid;
+        place-items: center;
+    }
+    .setDisplay{
+        display: grid;
+        margin-top: 5%;
+        grid-template-columns: 1fr;
+    }
+    .chekedBoxA{
+        border: 2px solid hsl(231, 11%, 63%);
+        height: 94%;
+        width: auto;
+        display: flex;
+        background-color: hsla(229, 24%, 87%, 0.5);
+        padding-left:2% ;
+        text-decoration: none;
+        border-radius: 10px;
+        align-items: center;
+    }
+    .chekedBoxA img{
+        width: 30px;
+        height: 30px;
+    }
+    .chekedBoxA footer{
+        margin-left: 5%;
+    }
+    .chekedBoxA footer h3{
+        font-size: 16px;
+    }
+    .chekedBoxA footer p{
+        font-size: 14px;
+    }
+    .nameuser::after{
+        width: 40%;
+    }
+    .option_input{
+        width: 74%;
+    }
+    .info_input h3{
+        font-size: 16px;
+    }
+    
+    .info_input p{
+        font-size: 14px;
+    }
+    .value{
+        font-size: 14px;
+    }
+    .next{
+        position: fixed;
+        right: 1%;
+        bottom: 1%;
+    }
+    .go_back{
+        position: fixed;
+        left: 1%;
+        bottom: 1%;
+    }
+}
